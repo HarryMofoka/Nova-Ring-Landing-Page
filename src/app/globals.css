@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-bg: #000000;
+  --color-dark-surface: #0a0a0a;
+  --color-dark-elevated: #111111;
+  --color-titanium: #e0e0e0;
+  --color-silver: #888888;
+  --color-gold: #cba153;
+  --font-display: var(--font-plus-jakarta), sans-serif;
+  --font-mono: var(--font-space-mono), monospace;
+}
+
+@layer base {
+  :root {
+    --background: #000000;
+    --foreground: #e0e0e0;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-display);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Utility for glassmorphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-panel {
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(224, 224, 224, 0.5);
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 30px rgba(203, 161, 83, 0.15);
+  }
+}
+
+/* Hide scrollbar for clean look */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+html {
+  scrollbar-width: none;
+}
